@@ -1,0 +1,671 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-width: 300px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.section_heading {
+  text-align: center;
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin: 40px 0 60px 0;
+  color: #370617;
+}
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* navbar */
+nav {
+  z-index: 1000;
+  text-transform: capitalize;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.759);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #370617;
+  font-size: 1.3rem;
+  padding: 0 25px;
+  position: sticky;
+  top: 0;
+}
+nav i {
+  visibility: hidden;
+  position: absolute;
+  right: 70px;
+  color: #370617;
+  cursor: pointer;
+}
+nav .logo {
+  font-weight: bolder;
+  letter-spacing: 1.5px;
+  font-size: 1.5rem;
+  margin-left: 30px;
+}
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+nav ul li a {
+  padding: 10px 20px;
+  border-radius: 25px;
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
+  margin: 0 5px;
+}
+nav ul li a:hover {
+  background: #ffba08;
+}
+nav ul li a.active {
+  background: #ffba08;
+}
+nav #burger_menu {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 100%;
+  position: absolute;
+  right: 0%;
+  background: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  height: 50vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+nav #burger_menu li a {
+  padding: 10px 180px;
+}
+
+header {
+  overflow: hidden;
+  position: relative;
+}
+header i {
+  font-size: 2.5rem;
+  color: rgba(55, 6, 23, 0.4274509804);
+  cursor: pointer;
+}
+header i.fa-angle-double-right {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+}
+header i.fa-angle-double-left {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+}
+header .slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+header .slide .txt {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+header .slide .txt h2 {
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  width: 50%;
+}
+header .slide .txt p {
+  margin: 20px 0;
+}
+header .slide .txt .min_items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+header .slide .txt .min_items .item {
+  width: 30%;
+}
+header .slide .txt figure {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+}
+header .slide .txt figure img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+header .slide .txt a {
+  padding: 20px 65px;
+  margin-top: 60px;
+  border-radius: 50px;
+  background: #f48c06;
+  border: none;
+  color: #370617;
+  cursor: pointer;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
+}
+header .slide .txt a:hover {
+  background: #ffba08;
+}
+header .slide .image {
+  width: 60%;
+}
+header .slide .image img {
+  width: 100%;
+}
+
+.about {
+  min-width: 300px;
+}
+.about .about_contaier {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.about .about_contaier .about_video {
+  -ms-flex-preferred-size: 1;
+      flex-basis: 1;
+}
+.about .about_contaier .about_video video {
+  width: 100%;
+  padding: 10px;
+}
+.about .about_contaier .about_txt {
+  -ms-flex-preferred-size: 1;
+      flex-basis: 1;
+  padding: 20px;
+}
+.about .about_contaier .about_txt h2 {
+  text-transform: capitalize;
+  margin: 30px 0;
+  font-size: 2rem;
+  color: #370617;
+}
+.about .about_contaier .about_txt p {
+  line-height: 2;
+}
+
+.menu_container {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(430px, 1fr));
+  gap: 60px 30px;
+  width: 95vw;
+  margin: auto;
+  max-width: 1600px;
+}
+.menu_container .menu_item {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  text-transform: capitalize;
+  margin: auto;
+  padding: 10px;
+}
+.menu_container .menu_item h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.menu_container .menu_item .plate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.menu_container .menu_item .plate figure {
+  width: 80px;
+  height: 80px;
+}
+.menu_container .menu_item .plate figure img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.menu_container .menu_item .plate .txt {
+  margin-left: 30px;
+}
+.menu_container .menu_item .plate .txt h3 {
+  margin: 10px 0;
+}
+.menu_container .menu_item .plate .txt p {
+  color: #aaa;
+}
+.menu_container .menu_item .plate .price {
+  margin: 10px 0;
+  margin-left: 120px;
+}
+
+.menu button {
+  margin: auto;
+  margin-top: 20px;
+  display: block;
+  border: none;
+  width: 250px;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  padding: 10px 20px;
+  border-radius: 25px;
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
+  color: #370617;
+  cursor: pointer;
+  background-color: #f48c06;
+}
+.menu button:hover {
+  background: #ffba08;
+}
+
+.reservation {
+  margin-top: 60px;
+}
+.reservation .reservation_container {
+  width: 80vw;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 90vh;
+}
+.reservation .reservation_container figure {
+  height: inherit;
+}
+.reservation .reservation_container figure img {
+  height: 95%;
+}
+.reservation .reservation_container form {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px;
+  width: 65%;
+}
+.reservation .reservation_container form input,
+.reservation .reservation_container form select,
+.reservation .reservation_container form textarea {
+  width: 100%;
+  height: 50px;
+  padding: 5px;
+  color: #370617;
+  border: none;
+  border-bottom: 1px solid #777;
+  margin-bottom: 20px;
+  outline: none;
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
+  background: rgba(255, 255, 255, 0.5);
+}
+.reservation .reservation_container form input[type=submit] {
+  cursor: pointer;
+  background: #f48c06;
+  border: none;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+.reservation .reservation_container form input[type=submit]:hover {
+  background: #ffba08;
+}
+.reservation .reservation_container form textarea {
+  min-height: 100px;
+}
+
+footer {
+  padding: 60px 0;
+  background: #141313;
+  color: #aaa;
+}
+footer .footer-contaier {
+  margin: auto;
+  width: 90%;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, auto));
+  gap: 10px;
+}
+footer .footer-contaier > div {
+  padding: 10px;
+}
+footer .footer-contaier .social h3 {
+  text-transform: capitalize;
+  font-size: 1.3rem;
+}
+footer .footer-contaier .social p {
+  margin: 25px 0;
+  color: #777;
+}
+footer .footer-contaier .social div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+footer .footer-contaier .social div a {
+  color: white;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  background: #201f1f;
+  text-align: center;
+  margin-right: 25px;
+}
+footer .footer-contaier .time table {
+  width: 100%;
+}
+footer .footer-contaier .time table thead th {
+  padding-bottom: 10px;
+  text-align: left;
+}
+footer .footer-contaier .time table tbody tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5px;
+  color: #777;
+}
+footer .footer-contaier .time table tbody tr td:nth-of-type(2) {
+  margin-right: 20px;
+}
+footer .footer-contaier .contact {
+  padding: 0 30px;
+}
+footer .footer-contaier .contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+footer .footer-contaier .contact form input,
+footer .footer-contaier .contact form textarea {
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  color: white;
+}
+footer .footer-contaier .contact form input:nth-of-type(1),
+footer .footer-contaier .contact form textarea:nth-of-type(1) {
+  background: #2c2b2b;
+  margin-bottom: 10px;
+}
+footer .footer-contaier .contact form input:nth-of-type(2),
+footer .footer-contaier .contact form textarea:nth-of-type(2) {
+  background: #f34949;
+  color: #ffffff;
+  cursor: pointer;
+}
+footer .footer-contaier .contact form textarea {
+  max-width: 300px;
+  min-height: 150px;
+}
+footer .copyright {
+  text-align: center;
+  padding: 70px 0 40px 0;
+}
+
+@media (max-width: 1250px) {
+  nav .nav_item ul {
+    display: none;
+  }
+
+  nav i {
+    visibility: visible;
+  }
+
+  header .slide {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  header .slide .txt {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    left: 50%;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 40px;
+    border-radius: 40px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-top: -50px;
+  }
+  header .slide .image {
+    width: 100vw;
+  }
+  header .slide .image img {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  header .slide .txt {
+    margin: auto;
+    position: static;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    z-index: 10;
+  }
+
+  .about_contaier {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about_contaier .about_video {
+    width: 100%;
+  }
+  .about_contaier .about_video video {
+    width: 100%;
+  }
+  .about_contaier .about_txt {
+    width: 100%;
+  }
+
+  .reservation .reservation_container {
+    width: 100%;
+  }
+  .reservation .reservation_container figure {
+    display: none;
+  }
+  .reservation .reservation_container form {
+    margin: auto;
+    padding: 15px;
+    background: url("../img/chef-photo.jpg");
+    background-size: cover;
+    width: 100%;
+  }
+  .reservation .reservation_container form ::-webkit-input-placeholder {
+    color: #370617;
+  }
+  .reservation .reservation_container form ::-moz-placeholder {
+    color: #370617;
+  }
+  .reservation .reservation_container form :-ms-input-placeholder {
+    color: #370617;
+  }
+  .reservation .reservation_container form ::-ms-input-placeholder {
+    color: #370617;
+  }
+  .reservation .reservation_container form ::placeholder {
+    color: #370617;
+  }
+  .reservation .reservation_container form .section_heading {
+    font-size: 1rem;
+    color: whitesmoke;
+  }
+
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .footer-contaier > div {
+    width: 100%;
+  }
+  footer .footer-contaier .time {
+    width: 60%;
+  }
+  footer .footer-contaier .contact {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  header .slide {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  header .slide .txt {
+    width: 100%;
+    padding: 10px 5px;
+  }
+  header .slide .txt h2 {
+    font-size: 1rem;
+  }
+  header .slide .txt p {
+    font-size: 0.8rem;
+  }
+  header .slide .txt a {
+    padding: 5px 20px;
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+  header .slide .txt .min_items .item p {
+    font-size: 0.8rem;
+  }
+
+  .reservation .reservation_container {
+    width: 100%;
+  }
+  .reservation .reservation_container form {
+    width: 100%;
+    padding: 5px;
+  }
+  .reservation .reservation_container form .section_heading {
+    font-size: 1rem;
+    color: whitesmoke;
+  }
+
+  footer {
+    padding: 60px 0;
+    background: #141313;
+    color: #aaa;
+  }
+  footer .footer-contaier {
+    width: 100vw;
+  }
+  footer .footer-contaier > div {
+    width: 100%;
+    margin: auto;
+  }
+  footer .footer-contaier .contact {
+    width: 100%;
+  }
+
+  .copyright {
+    padding: 70px 20px 40px 20px;
+  }
+}
